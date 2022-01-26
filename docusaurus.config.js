@@ -22,6 +22,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -37,7 +38,7 @@ const config = {
         title: '',
         logo: {
           alt: 'Zep Logo',
-          src: 'img/logo.svg',
+          src: 'img/zeppelin.png',
         },
         items: [
           {
@@ -60,16 +61,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Zeppelin Configuration',
+                label: 'Zeppelin Docs',
                 href: 'https://zeppelin.gg/docs'
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Discord Servers',
             items: [
               {
-                label: 'Discord',
+                label: 'Official',
+                href: 'https://discordapp.com/invite/zeppelin'
+              },
+              {
+                label: 'Hangar',
                 href: 'https://discordapp.com/invite/uTcdUmF6Q7',
               },
             ],
