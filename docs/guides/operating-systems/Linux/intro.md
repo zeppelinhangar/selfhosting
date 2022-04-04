@@ -4,7 +4,7 @@ description: The Recommended Way
 hide_table_of_contents: false
 ---
 
-# Linux Setup
+# Ubuntu Setup
 
 ## Intro
 Incase you haven't done so already, take a look at the [README](../../../intro.md)! :triumph:
