@@ -20,7 +20,7 @@ Create a new project, provisioned with the MySQL Plugin
 ![Provision MySQL](/img/guides/railway/provision_mysql.png "Provision MySQL")
 
 1. Run Control/Command + K and select 'Metrofy'.
-2. Fork this repo, we're going to deploy it next.
+2. Fork [this repo](https://github.com/nebulatgs/zeppelin-railway/fork), we're going to deploy it next.
 
 
 ## Creating the API Service
