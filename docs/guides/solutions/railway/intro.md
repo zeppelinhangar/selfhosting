@@ -17,7 +17,7 @@ hide_table_of_contents: false
 ## Setting up the Railway Project
 
 Create a new project, provisioned with the MySQL Plugin
-![Provision MySQL](/img/provision_mysql.png "Provision MySQL")
+![Provision MySQL](/img/guides/railway/provision_mysql.png "Provision MySQL")
 
 1. Run Control/Command + K and select 'Metrofy'.
 2. Fork this repo, we're going to deploy it next.
