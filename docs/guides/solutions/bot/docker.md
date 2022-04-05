@@ -31,6 +31,8 @@ and compiled `.js` files
  - To run the tests for the files in the `shared/` directory, you also need to run `npm ci` there.
 :::
 
+------------------------------------------------------------------------
+
 :::note
 If the [repository](https://github.com/Benricheson101/ZeppelinBot) is outdated, fork it and run
 `git pull https://github.com/Dragory/ZeppelinBot.git`. You should then resolve-merge conflicts (if any). Clone your fork
