@@ -1,5 +1,5 @@
 ---
-title: Ubuntu Guide
+title: 18.04.6 LTS+
 description: The Recommended Way
 hide_table_of_contents: false
 ---
@@ -7,7 +7,7 @@ hide_table_of_contents: false
 # Ubuntu Setup
 
 ## Intro
-Incase you haven't done so already, take a look at the [README](../../../intro.md)! :triumph:
+Incase you haven't done so already, take a look at the [README](../../../../intro.md)! :triumph:
 
 ## Useful resources
 Throughout the installation, you might run into things you are not familiar with, here is a list of some resources you

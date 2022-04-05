@@ -66,7 +66,7 @@ PORT=8800
 OAUTH_CALLBACK_URL=https://${{ RAILWAY_STATIC_URL }}/auth/oauth-callback
 ```
 
-4. Complete [Discord Bot Setup page](../../Discord/bot-creation/intro), then copy these variables from OAuth:
+4. Complete [Discord Bot Setup page](../../Discord/bot-creation/creation), then copy these variables from OAuth:
 ```bash
 CLIENT_SECRET=<OAuth Client Secret>
 CLIENT_ID=<OAuth Client ID>
