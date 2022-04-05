@@ -29,6 +29,7 @@ placed in `backend/dist/shared`.
  - The `backend/register-tsconfig-paths.js` module takes care of registering shared paths from `tsconfig.json` for `ava`
 and compiled `.js` files
  - To run the tests for the files in the `shared/` directory, you also need to run `npm ci` there.
+:::
 
 :::note
 If the [repository](https://github.com/Benricheson101/ZeppelinBot) is outdated, fork it and run
