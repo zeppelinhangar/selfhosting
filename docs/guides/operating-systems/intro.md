@@ -5,4 +5,4 @@ hide_table_of_contents: false
 sidebar_position: 1
 ---
 
-use [ubunu](/docs/guides/operating-systems/Linux/ubuntu/ubuntu-18.md) dipshit
+use [ubunu](./Linux/ubuntu/ubuntu-18.md) dipshit

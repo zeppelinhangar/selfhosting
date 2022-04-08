@@ -17,10 +17,10 @@ If the bot and API give an error saying they can't connect to the database even 
 :::
 
 ## Running the API Services
-Follow the steps listed in the [API tutorial](/docs/services/api.md)
+Follow the steps listed in the [API tutorial](../../../services/api.md)
 
 ## Running the dashboard
-Follow the steps listed in the [dashboard tutorial](/docs/services/dashboard.md)
+Follow the steps listed in the [dashboard tutorial](../../../services/dashboard.md)
 
 :::note Notes
  - Since we now use shared paths in `tsconfig.json`, the compiled files in `backend/dist/` have longer paths, e.g. 
