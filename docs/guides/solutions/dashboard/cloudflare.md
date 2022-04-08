@@ -9,7 +9,7 @@ hide_table_of_contents: false
 ## Prerequisites
 - [GitHub Fork of ZeppelinBot](https://github.com/Dragory/ZeppelinBot/fork)
 - [Cloudflare Account](https://dash.cloudflare.com/sign-up)
-- Functioning Api & Bot Services ([View relevant OS guide](/docs/guides/operating-systems/intro.md))
+- Functioning Api & Bot Services ([View relevant OS guide](../../operating-systems/intro.md))
 
 ## Creating your Cloudflare Project
 1. On the Cloudflare dashboard, navigate to the pages section.
