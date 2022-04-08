@@ -15,6 +15,8 @@ const config = {
   organizationName: 'zeppelinhangar', // Usually your GitHub org/user name.
   projectName: 'selfhosting', // Usually your repo name.
 
+  plugins: ['@someok/docusaurus-plugin-relative-paths'],
+
   presets: [
     [
       'classic',
