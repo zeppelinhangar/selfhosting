@@ -123,7 +123,7 @@ to the bottom of the file.
 8. Save the file, then restart mariadb with `sudo systemctl restart mariadb`
 
 ### Setting up the Bot
-Please refer to the [Discord Bot Setup page](../../Discord/bot-creation/intro).
+Please refer to the [Discord Bot Setup page](../../../discord/bot-creation/creation.md).
 
 ### Fill in the Bot and API settings
 1. `nano bot.env`

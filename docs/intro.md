@@ -5,6 +5,6 @@ slug: /
 
 # Introduction
 
-~~So you got bored of waiting for ZepMail?~~
+~~So you got bored with waiting for ZepMail?~~
 
 So you've decided to get custom branding for Zeppelin?
