@@ -4,9 +4,10 @@ description: Hosting on Railway.app
 hide_table_of_contents: false
 ---
 
-# Deploy [Zeppelin](https://zeppelin.gg) on [Railway](https://railway.app?referralCode=nebula) 
+# Deploy [Zeppelin](https://zeppelin.gg) on [Railway](https://railway.app?referralCode=nebula)
 
 ## Prerequisites
+
 - [Railway Account](https://railway.app?referralCode=nebula) - connected to GitHub
 - [Discord Account](https://discord.com)
 - [GitHub Account](https://github.com) - older than 30 days
@@ -36,25 +37,29 @@ Rename the service if you would like and set the root directory to `/api`
 > _Note: may not build, as patch-files are based off of upstream_
 >
 > Create a variable name `GIT_REPO` and set it to the url to your custom fork of Zeppelin
+>
 > ```bash
 >  # Optional, for advanced users (replace with your custom fork)
 >  GIT_REPO=https://github.com/Dragory/ZeppelinBot.git
 > ```
 
 1. Create a variable named `KEY` and set it to
-[32 random characters](https://passwordsgenerator.net/?length=32&symbols=0&numbers=1&lowercase=1&uppercase=1&similar=0&ambiguous=0&client=1&autoselect=0).
+   [32 random characters](https://passwordsgenerator.net/?length=32&symbols=0&numbers=1&lowercase=1&uppercase=1&similar=0&ambiguous=0&client=1&autoselect=0).
+
 ```bash
 # Example (don't use this):
 KEY=eilegiluegoigefiugsdzdiuggfweaiug
 ```
 
 2. Create a variable named `STAFF` and set it to your Discord Snowflake.
+
 ```bash
 # Replace with your snowflake
 STAFF=524722785302609941
 ```
 
 3. Copy the following variables into the api service (tip: Bulk Import)
+
 ```bash
 DB_PASSWORD=${{ MYSQLPASSWORD }}
 DB_USER=${{ MYSQLUSER }}
@@ -67,16 +72,17 @@ OAUTH_CALLBACK_URL=https://${{ RAILWAY_STATIC_URL }}/auth/oauth-callback
 ```
 
 4. Complete [Discord Bot Setup page](../../Discord/bot-creation/creation), then copy these variables from OAuth:
+
 ```bash
 CLIENT_SECRET=<OAuth Client Secret>
 CLIENT_ID=<OAuth Client ID>
 ```
 
 ## Creating the Bot Service
+
 1. Deploy your fork again by creating a new service, like you did for the api.
 2. Rename the service if you would like and set the root directory to `/bot`
 3. Create the following variables:
-
 
 ```bash
 # Pick a root server to add the bot to
@@ -90,12 +96,14 @@ TOKEN=<Bot Token>
 ```
 
 ## Initializing the Database
+
 1. Clone your fork of this repo, make sure Node.js and Railway CLI are installed.
 2. Open a terminal and enter the `init-db` folder.
 3. Run `npm ci` to install deps.
 4. Run `railway run node .` to set up the database, Control + C once it stops logging. (To be fixed)
 
 ## Creating the Dashboard Service
+
 Deploy your fork again by creating a new service, like you did for the bot.
 Rename the service if you would like and set the root directory to `/dashboard`
 Create a variable named `API_URL` and set it to the url Railway generated for the api service.

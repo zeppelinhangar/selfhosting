@@ -142,20 +142,20 @@ Please refer to the [Discord Bot Setup page](../../../discord/bot-creation/creat
    - TOKEN= _(Fill in the token from your discord bot application)_
    - DB_HOST=localhost
    - DB_USER=zep
-   - DB_PASSWORD= _(Fill in with the password you used in the database setup)_
+   - DB*PASSWORD= *(Fill in with the password you used in the database setup)\_
    - DB_DATABASE=zep
 2. Save the file
 3. `nano api.env`
    - PORT=8800
-   - CLIENT_ID= _(Fill in with the client id from your discord application)_
-   - CLIENT_SECRET= _(Fill in with the secret from your discord application)_
-   - OAUTH_CALLBACK_URL= _(Put the same URL you did in the Discord Application settings)_
+   - CLIENT*ID= *(Fill in with the client id from your discord application)\_
+   - CLIENT*SECRET= *(Fill in with the secret from your discord application)\_
+   - OAUTH*CALLBACK_URL= *(Put the same URL you did in the Discord Application settings)\_
    - DASHBOARD_URL=http://YOUR_IP:1234
      - Use the same domain/IP as you did for OAUTH_CALLBACK_URL
      - Make sure there is no trailing slash
    - DB_HOST=localhost
    - DB_USER=zep
-   - DB_PASSWORD= _(Fill in with the password you used in the database setup)_
+   - DB*PASSWORD= *(Fill in with the password you used in the database setup)\_
    - DB_DATABASE=zep
    - STAFF= _(Fill in your Discord User ID here)_
 4. Save the file.
