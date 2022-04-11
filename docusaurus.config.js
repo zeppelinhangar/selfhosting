@@ -9,7 +9,7 @@ const config = {
   title: "Zeppelin Selfhost Docs",
   url: "https://zepdocs.i0.tf",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "error",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "zeppelinhangar", // Usually your GitHub org/user name.
