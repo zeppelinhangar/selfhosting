@@ -4,3 +4,4 @@ src
 .docusarus
 .husky
 static
+.prettierrc.js
