@@ -6,7 +6,6 @@
     "docusaurus": "docusaurus",
     "test": "npm i && npm run fmt && docusaurus start",
     "build": "npm run fmt && docusaurus build && rimraf build/blog",
-    "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
