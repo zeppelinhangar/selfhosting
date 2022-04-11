@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "test": "docusaurus start",
+    "test": "npm i && npm run fmt && docusaurus start",
     "build": "npm run fmt && docusaurus build && rimraf build/blog",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
