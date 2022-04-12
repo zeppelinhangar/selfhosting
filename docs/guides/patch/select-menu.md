@@ -5,6 +5,10 @@ hide_table_of_contents: false
 sidebar_position: 2
 ---
 
+:::info
+This patch was tested for [master@280543d](https://github.com/ZeppelinBot/Zeppelin/commit/280543df4e45bfebb27c1c8142c787ecbfb6fc2a)
+:::
+
 ## What is this?
 
 The select menu roles patch adds customizable select menu roles pickers
@@ -26,7 +30,3 @@ In order to apply the patch you will need to rebuild and redeploy your Bot Servi
 ## Respective Patches
 
 `0001-creating-select-menu-role.patch`- Initial setup
-
-## Tested for
-
-[master@280543d](https://github.com/ZeppelinBot/Zeppelin/commit/280543df4e45bfebb27c1c8142c787ecbfb6fc2a)
