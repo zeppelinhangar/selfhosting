@@ -1,5 +1,5 @@
 ---
-title: <TBD> Raspbian v?
+title: <TBD> Raspbian
 description: Hosting both ends on Raspbian
 hide_table_of_contents: false
 sidebar_position: 2

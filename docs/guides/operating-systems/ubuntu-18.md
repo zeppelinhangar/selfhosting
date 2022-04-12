@@ -1,9 +1,13 @@
 ---
-title: Ubuntu 18.04.6 LTS+
+title: Ubuntu
 description: The Recommended Way
 hide_table_of_contents: false
 sidebar_position: 1
 ---
+
+:::info
+This guide was writen and tested for **Ubuntu 18.04.6 LTS**
+:::
 
 # Ubuntu Setup
 
