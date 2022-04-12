@@ -1,14 +1,15 @@
 ---
-title: 18.04.6 LTS+
+title: Ubuntu 18.04.6 LTS+
 description: The Recommended Way
 hide_table_of_contents: false
+sidebar_position: 1
 ---
 
 # Ubuntu Setup
 
 ## Intro
 
-Incase you haven't done so already, take a look at the [README](../../../../intro.md)! :triumph:
+Incase you haven't done so already, take a look at the [README](../../intro.md)! :triumph:
 
 ## Useful resources
 
@@ -134,7 +135,7 @@ to the bottom of the file.
 
 ### Setting up the Bot
 
-Please refer to the [Discord Bot Setup page](../../../discord/bot-creation/creation.md).
+Please refer to the [Discord Bot Setup page](../discord/bot-creation/creation.md).
 
 ### Fill in the Bot and API settings
 

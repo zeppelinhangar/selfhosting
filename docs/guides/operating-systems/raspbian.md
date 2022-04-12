@@ -2,6 +2,7 @@
 title: <TBD> Raspbian v?
 description: Hosting both ends on Raspbian
 hide_table_of_contents: false
+sidebar_position: 2
 ---
 
 - [ ] rename this file to have a version
