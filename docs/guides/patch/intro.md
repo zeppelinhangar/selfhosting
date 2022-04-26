@@ -40,3 +40,7 @@ If a patch does not work on latest of [the main repo](https://github.com/Zeppeli
 ### [Select Menu Roles](./select-menu.md)
 
 Adds select-menu role pickers
+
+### [Timeout Support](./timeouts.md)
+
+Adds timeout support for mutes
