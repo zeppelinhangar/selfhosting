@@ -14,7 +14,7 @@ The `Community Patch` is a collection of self-hosting "patches" for common-used 
 Right now, patches are being added manually to the [patches repository](https://github.com/zeppelinhangar/community-patch/patches) and you can apply them to your own instance by downloading the patch and running `git am <path to file>`.
 
 :::info
-After applying a patch, you may need to perform any/all of the following actions:
+After applying a patch, you may need to perform any/all the following actions:
 
 > - Rebuild your [Bot Service](../../services/bot.md)
 > - Rebuild your [API Service](../../services/api.md)
@@ -27,7 +27,7 @@ After applying a patch, you may need to perform any/all of the following actions
 
 ## Outdated patch disclaimer
 
-Each patch will have on it's guide page documented the github commit it was tested for [the main repo](https://github.com/ZeppelinBot/Zeppelin), if it does not function for your current repo, please try cloning the specified commit and try again.
+Each patch will have on its guide page documented the GitHub commit it was tested for [the main repo](https://github.com/ZeppelinBot/Zeppelin), if it does not function for your current repo, please try cloning the specified commit and try again.
 
 All patches are maintained by the community and as thus are not guaranteed to always be up-to-date or functioning.
 
