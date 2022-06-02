@@ -11,7 +11,9 @@ The `Community Patch` is a collection of self-hosting "patches" for common-used 
 
 ## How to use?
 
-Right now, patches are being added manually to the [patches repository](https://github.com/zeppelinhangar/community-patch/patches) and you can apply them to your own instance by downloading the patch and running `git am <path to file>`.
+Right now, patches are being added manually to the [patches repository,](https://github.com/zeppelinhangar/community-patch/patches) and you can apply them to your own instance by downloading the patch and running `git am <path to file>`.
+
+However, you can generate a patch file for any [PR](https://github.com/ZeppelinBot/Zeppelin/pulls) by appending `.patch` to the URL.
 
 :::info
 After applying a patch, you may need to perform any/all the following actions:
@@ -44,3 +46,7 @@ Adds select-menu role pickers
 ### [Timeout Support](./timeouts.md)
 
 Adds timeout support for mutes
+
+### [Social Media Poster](./social-media.md)
+
+Adds automatic feeds for social media
