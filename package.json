@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "test": "npm i && npm run fmt && docusaurus start",
-    "build": "npm run fmt && docusaurus build && rimraf build/blog",
+    "test": "yarn i && yarn run fmt && docusaurus start",
+    "build": "yarn run fmt && docusaurus build && rimraf build/blog",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "fmt": "npm run prepare && prettier docs --write --ignore-unknown",
+    "fmt": "yarn run prepare && prettier docs --write --ignore-unknown",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -25,7 +25,8 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "remark-parse": "^10.0.1"
+    "remark-parse": "^10.0.1",
+    "yarn": "^1.22.18"
   },
   "browserslist": {
     "production": [
