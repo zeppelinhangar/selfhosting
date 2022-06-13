@@ -18,8 +18,8 @@ sidebar_position: 99
 ## Community Patches
 
 - **Jernik** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/100613274353029120) [![gh](/img/logos/github.png)](https://github.com/Jernik) **)** :: [Select Menus Patch](./guides/patch/select-menu.md)
-- **metal** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/344837487526412300) [![gh](/img/logos/github.png)](https://github.com/metal0) **)** :: [Select Menus Guide & Code](./guides/patch/select-menu.md)
-- **KK** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/426892116258717707) [![gh](/img/logos/github.png)](https://github.com/KK964) **)** :: [Social Media Patch](./guides/patch/social-media.md)
+- **metal** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/344837487526412300) [![gh](/img/logos/github.png)](https://github.com/metal0) **)** :: [Select Menus + Reason Aliases Patches](./guides/patch/select-menu.md)
+- **KK** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/426892116258717707) [![gh](/img/logos/github.png)](https://github.com/KK964) **)** :: [Social Media + Activities Patches](./guides/patch/social-media.md)
 
 ## Documentation
 

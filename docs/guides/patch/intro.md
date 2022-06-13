@@ -50,3 +50,11 @@ Adds timeout support for mutes
 ### [Social Media Poster](./social-media.md)
 
 Adds automatic feeds for social media
+
+### [Reason Aliases](./reason-aliases.md)
+
+Adds 'canned' reasoning for moderator actions
+
+### [VC Activities](./activities.md)
+
+Adds the ability for Discord's VC activities
