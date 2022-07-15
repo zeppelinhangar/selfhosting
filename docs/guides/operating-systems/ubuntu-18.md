@@ -6,7 +6,7 @@ sidebar_position: 1
 ---
 
 :::info
-This guide was writen and tested for **Ubuntu 18.04.6 LTS**
+This guide was written and tested for **Ubuntu 18.04.6 LTS**
 :::
 
 # Ubuntu Setup
