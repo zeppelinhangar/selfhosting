@@ -12,6 +12,7 @@ The [configuration format](https://zeppelin.gg/docs/configuration/configuration-
 [their format](https://zeppelin.gg/docs/configuration/plugin-configuration).
 
 ## List of guides
+
 [Mod Actions](moderation/mod_actions.md)
 
 ## Other Resources
