@@ -13,25 +13,23 @@ the `plugins` list in config.
 
 View [default configuration](https://zeppelin.gg/docs/plugins/mod_actions/configuration).
 
-## Plugin breakdown
-
-### Sanction Notification
+## Sanction Notifications
 
 These first config options define how Zeppelin will interact with the users sanctioned.
 
-#### DM Values
+### DM Values
 
 The values `dm_on_warn`, `dm_on_kick`, and `dm_on_ban` determine whether a user will be notified of their sanctions
 through DMs. Ignoring privacy settings, setting these to `true` will notify the user, and `false` keeps them in the
 dark. Note: `tempban` actions take the `ban` configuration.
 
-#### Channel values
+### Channel values
 
 The other set of notifying options `message_on_warn`, `message_on_kick`, and `message_on_ban` are similar to their
 `DM` counterparts, but, taking the value of `message_channel` they notify a channel instead. Note: `tempban` actions
 take the `ban` configuration.
 
-##### Notifying messages
+#### Notifying messages
 
 Both of these notifying options take the same message templates defined in `warn_message`, `kick_message`, and
 `ban_message`. In the official documentation, you will see these written as one line, you can make the messages
@@ -48,23 +46,23 @@ mod_actions:
 However, the `tempban` action has its own message option that can be defined under `tempban_message`, it comes with an
 exciting new variable: `banTime`.
 
-### Alerts
+## Alerts
 
 Alerts are a nifty way for your mod-team to be notified of actors trying to evade sanctions by leaving and re-joining
 your server. Define the channel in `alert_channel` and set `alert_on_rejoin` to `true`.
 
-### Thresholds
+## Thresholds
 
 Thresholds are useful for alerting moderators if a user is about to exceed a pre-determined number of cases. This can be
-used to make your mod team consider whether harsher action is necessary. Define the threshold in `warn_notify_threshold`
-, adjust the message under `warn_notify_message`, and enable `warn_notify_enabled`.
+used to make your mod team consider whether harsher action is necessary. Define the threshold in `warn_notify_threshold`,
+adjust the message under `warn_notify_message`, and enable `warn_notify_enabled`.
 
-### Ban Message Deletion
+## Ban Message Deletion
 
 You can adjust the day's worth of messages Zeppelin deletes under the `ban_delete_message_days` option. Do not append
 your input with 'd'.
 
-### Moderation Commands
+## Moderation Commands
 
 It is recommended to read the [permissions' page](https://zeppelin.gg/docs/configuration/permissions) before continuing to set up this plugin.
 
