@@ -32,6 +32,8 @@ hide_table_of_contents: false
 ```bash
 API_URL = https://<your_api_url>.tld
 NODE_ENV = production
+NODE_VERSION = 16
+PYTHON_VERSION = 3.7
 ```
 
 ## Setting a Domain
