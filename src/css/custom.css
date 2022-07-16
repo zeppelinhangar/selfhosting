@@ -26,3 +26,14 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+[alt="disc"] {
+  margin-bottom: -5px;
+  width: 20px;
+  height: 20px;
+}
+[alt="gh"] {
+  margin-bottom: -2px;
+  width: 15px;
+  height: 15px;
+}
