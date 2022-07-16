@@ -11,6 +11,8 @@ to your indentation.
 The [configuration format](https://zeppelin.gg/docs/configuration/configuration-format) is broken up into 'plugins':
 [their format](https://zeppelin.gg/docs/configuration/plugin-configuration).
 
+Want to suggest a guide for a plugin you struggled with? Join the [Self Host Community](https://discord.gg/uTcdUmF6Q7) and express your feelings!
+
 ## List of guides
 
 [Mod Actions](moderation/mod_actions.md)
