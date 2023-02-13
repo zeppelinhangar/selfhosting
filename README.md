@@ -1,7 +1,7 @@
 # Zeppelin Self-Hosting
 
 This repository is relevant to the Zeppelin self-hosting documentation writen by the community itself.
-Feel free to visit the website over at [https://zepdocs.i0.tf](https://zepdocs.i0.tf)
+Feel free to visit the website over at [https://selfhosting-docs.pages.dev](https://selfhosting-docs.pages.dev)
 
 # Contributing
 
