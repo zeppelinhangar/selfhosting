@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "test": "yarn install && yarn run fmt && docusaurus start",
+    "test": "yarn install && yarn run fmt && docusaurus start --host 0.0.0.0",
     "build": "yarn run fmt && docusaurus build && rimraf build/blog",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
