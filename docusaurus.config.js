@@ -13,7 +13,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "zeppelinhangar", // Usually your GitHub org/user name.
-  projectName: "selfhosting", // Usually your repo name.
+  projectName: "zeppelin-selfhosting", // Usually your repo name.
   presets: [
     [
       "classic",
