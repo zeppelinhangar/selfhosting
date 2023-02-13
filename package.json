@@ -1,26 +1,32 @@
 {
   "name": "selfhost-docs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
+    "test": "yarn install && yarn run fmt && docusaurus start --host 0.0.0.0",
+    "build": "yarn run fmt && docusaurus build && rimraf build/blog",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "fmt": "yarn run prepare && prettier docs --write --ignore-unknown",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.14",
-    "@docusaurus/preset-classic": "2.0.0-beta.14",
+    "@docusaurus/core": "^2.0.0-rc.1",
+    "@docusaurus/preset-classic": "^2.0.0-rc.1",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "prettier": "^2.6.2",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "remark-parse": "^10.0.1",
+    "yarn": "^1.22.18"
   },
   "browserslist": {
     "production": [
@@ -32,6 +38,20 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint"
+    }
+  },
+  "lint": {
+    "*.md": [
+      "prettier --write",
+      "git add"
     ]
   }
 }

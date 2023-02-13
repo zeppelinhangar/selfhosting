@@ -1,35 +1,28 @@
 ---
+title: <TBD> Introduction
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+~~So you got bored with waiting for ZepMail?~~
 
-## Getting Started
+So you've decided to get custom branding for Zeppelin?
 
-Get started by **creating a new site**.
+# Recommended prerequisites
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Before attempting to self-host Zeppelin, you should have basic experience with
 
-## Generate a new site
+- Webservers
+- Linux
+- NodeJS
+- Git
 
-Generate a new Docusaurus site using the **classic template**:
+Not only will this make the setup process easier, but it will also allow you to diagnose any issues you may run into in the future
 
-```shell
-npm init docusaurus@latest my-website classic
-```
+# Operating Systems
 
-## Start your site
+The only guide we provide is for **[Linux](./guides/operating-systems/ubuntu-18.md)**, and you will not receive support in the server if you use an operating system such as Windows. This is because Linux is the most suitable operating system for bots such as Zeppelin. While it might be possible on OSX or Windows, it is infinitely more difficult and is not as constant as the Linux setup is.
 
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+If you are new to Linux and are wondering what distribution to use, I would recommend Ubuntu Server. But almost all distributions should work, provided you follow the steps correctly and switch things that may be specific to your choice of distribution.
