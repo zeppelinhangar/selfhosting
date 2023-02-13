@@ -1,9 +1,9 @@
-name: Test Build
+name: CI Test Build
 
 on: [pull_request]
 
 jobs:
-  build_backend:
+  build:
     runs-on: ubuntu-latest
 
     strategy:
