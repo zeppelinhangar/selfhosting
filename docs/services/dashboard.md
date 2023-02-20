@@ -1,4 +1,4 @@
 ---
-title: <TBD> Dashboard
+title: <WIP> Dashboard
 sidebar_position: 3
 ---

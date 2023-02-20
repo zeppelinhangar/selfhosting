@@ -1,4 +1,4 @@
 ---
-title: <TBD> Contributing on Github
+title: <WIP> Contributing on Github
 sidebar_position: 2
 ---
