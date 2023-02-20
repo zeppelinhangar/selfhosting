@@ -59,6 +59,10 @@ Adds 'canned' reasoning for moderator actions
 
 Adds the ability for Discord's VC activities
 
-### [VC Activities](./better-archives.md)
+### [Better Archives](./better-archives.md)
 
 Adds better archiving capabilities to zeppelin
+
+### [Better Dashboard Management](./better-dashboard-management.md)
+
+Adds better dashboard management capabilities to zeppelin
