@@ -20,6 +20,8 @@ sidebar_position: 99
 - **Jernik** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/100613274353029120) [![gh](/img/logos/github.png)](https://github.com/Jernik) **)** :: [Select Menus Patch](./guides/patch/select-menu.md)
 - **metal** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/344837487526412300) [![gh](/img/logos/github.png)](https://github.com/metal0) **)** :: [Select Menus + Reason Aliases Patches](./guides/patch/select-menu.md)
 - **KK** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/426892116258717707) [![gh](/img/logos/github.png)](https://github.com/KK964) **)** :: [Social Media + Activities Patches](./guides/patch/social-media.md)
+- **Flokie** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/161165663715459072) [![gh](/img/logos/github.png)](https://github.com/FlokieW) **)** :: [Better Archives](./guides/patch/better-archives.md)
+- **AnsyWonhalf** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/141288766760288256) [![gh](/img/logos/github.png)](https://github.com/AnsyWonhalf) **)** :: [Better Archives](./guides/patch/better-archives.md)
 
 ## Documentation
 
