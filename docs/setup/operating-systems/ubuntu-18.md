@@ -2,7 +2,7 @@
 title: Ubuntu (Deprecated)
 description: The Recommended Way
 hide_table_of_contents: false
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 :::warning
