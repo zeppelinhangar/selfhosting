@@ -13,10 +13,10 @@ This section contains detailed guides for self-hosting the private Discord bot [
 
 Before attempting to self-host Zeppelin, you should have basic experience with
 
-- Webservers
-- Linux
-- NodeJS
-- Git
+- **Docker**
+- **Git**
+- **Webservers**
+- **Linux**
 
 Not only will this make the setup process easier, but it will also allow you to diagnose any issues you may run into in the future
 
