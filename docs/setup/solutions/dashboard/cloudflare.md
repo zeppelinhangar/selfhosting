@@ -1,5 +1,5 @@
 ---
-title: Cloudflare Guide
+title: Cloudflare Guide (Outdated)
 description: Hosting a dashboard on Cloudflare
 hide_table_of_contents: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: Railway Guide
+title: Railway Guide (Deprecated)
 description: Hosting on Railway.app
 hide_table_of_contents: false
 ---
