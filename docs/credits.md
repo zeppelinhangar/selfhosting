@@ -28,3 +28,9 @@ sidebar_position: 99
 ## Documentation
 
 - **zay** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/452793411401940995) [![gh](/img/logos/github.png)](https://github.com/isaacKenyon) **)** :: Writing these docs
+
+## Configuration
+
+- **zay** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/452793411401940995) [![gh](/img/logos/github.png)](https://github.com/isaacKenyon) **)** :: [Moderation](./config/moderation/mod_actions.md)
+- **metal** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/344837487526412300) [![gh](/img/logos/github.png)](https://github.com/metal0) **)** :: [Embed Logs](./config/logs/embed_logs.md)
+- **DEX** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/347727875266576395) **)** :: [Embed Logs](./config/logs/embed_logs.md)
