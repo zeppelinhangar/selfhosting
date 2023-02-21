@@ -6,6 +6,10 @@ hide_table_of_contents: false
 
 # Deploy [Zeppelin](https://zeppelin.gg) on [Railway](https://railway.app?referralCode=nebula)
 
+:::warn
+This guide is deperecated and **will likely not work** for you.
+:::
+
 ## Prerequisites
 
 - [Railway Account](https://railway.app?referralCode=nebula) - connected to GitHub
