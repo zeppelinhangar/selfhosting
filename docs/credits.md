@@ -12,8 +12,10 @@ sidebar_position: 99
 
 ## Solutions
 
-- **Ben!** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/255834596766253057) [![gh](/img/logos/github.png)](https://github.com/Benricheson101) **)** :: [Docker](./setup/solutions/bot/docker.md)
+- **Ben!** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/255834596766253057) [![gh](/img/logos/github.png)](https://github.com/Benricheson101) **)** :: Old Docker Guides
 - **Nebula** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/524722785302609941) [![gh](/img/logos/github.png)](https://github.com/nebulatgs) **)** :: [Railway.app](./setup/solutions/both/railway.md)
+- **David Wang** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/499810861335183372) [![gh](/img/logos/github.png)](https://github.com/duendwang) **)** :: [Docker](./setup/operating-systems/linux-docker.md)
+- **Ruby** **(** [![disc](/img/logos/discord.png)](https://discord.com/users/787592668242640907) [![gh](/img/logos/github.png)](https://github.com/rubyowo) **)** :: [Docker](./setup/operating-systems/linux-docker.md)
 
 ## Community Patches
 
