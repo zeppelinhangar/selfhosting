@@ -1,19 +1,23 @@
 ---
-title: Ubuntu
+title: Ubuntu (Deprecated)
 description: The Recommended Way
 hide_table_of_contents: false
 sidebar_position: 1
 ---
 
-:::info
-This guide was written and tested for **Ubuntu 18.04.6 LTS**
+:::warning
+This method of self-hosting is now deprecated, see the guide for docker [here](./linux-docker.md)
 :::
 
 # Ubuntu Setup
 
+:::info
+This guide was written and tested for **Ubuntu 18.04.6 LTS**
+:::
+
 ## Intro
 
-Incase you haven't done so already, take a look at the [README](../../intro.md)! :triumph:
+In case you haven't done so already, take a look at the [Introduction](../intro.md) :triumph:
 
 ## Useful resources
 
@@ -141,29 +145,33 @@ to the bottom of the file.
 
 Please refer to the [Discord Bot Setup page](../discord/bot-creation/creation.md).
 
-### Fill in the Bot and API settings
+### Fill in the Bot/API Env settings
 
-1. `nano bot.env`
-   - TOKEN= _(Fill in the token from your discord bot application)_
-   - DB_HOST=localhost
-   - DB_USER=zep
-   - DB*PASSWORD= *(Fill in with the password you used in the database setup)\_
-   - DB_DATABASE=zep
-2. Save the file
-3. `nano api.env`
-   - PORT=8800
-   - CLIENT*ID= *(Fill in with the client id from your discord application)\_
-   - CLIENT*SECRET= *(Fill in with the secret from your discord application)\_
-   - OAUTH*CALLBACK_URL= *(Put the same URL you did in the Discord Application settings)\_
-   - DASHBOARD_URL=http://YOUR_IP:1234
-     - Use the same domain/IP as you did for OAUTH_CALLBACK_URL
-     - Make sure there is no trailing slash
-   - DB_HOST=localhost
-   - DB_USER=zep
-   - DB*PASSWORD= *(Fill in with the password you used in the database setup)\_
-   - DB_DATABASE=zep
-   - STAFF= _(Fill in your Discord User ID here)_
-4. Save the file.
+1. `cp .env.example .env`
+2. Run the following commands in the terminal and copy the output to a text file. Once you start step 4 you won't be able to refer back to the terminal to get the output.
+   - `openssl rand -hex 16`
+     Copy the output (Select and Ctrl-Shift-C). You'll need it in the next step.
+3. `nano .env`
+   This opens nano, a text editor, editing .env. The subpoints lay out the values you need to fill in. Ignore the rows that are not mentioned below.
+   - `KEY`: This is an encryption key used to encrypt certain data in the database.
+     - Paste in the key you obtained from the openssl command in Step 3 above.
+     - It should be 32 characters long, letters and numbers only.
+   - `CLIENT_ID`: This is the ID of the bot you created above in the Discord developer portal.
+   - `CLIENT_SECRET`: This is the secret from the Oauth page in the Discord developer portal
+   - `BOT_TOKEN`: This is the bot token from the Bot page in the Discord developer portal.
+   - `DASHBOARD_URL`: This is the URL you and other bot managers will use to access the dashboard to manage server configs
+     - If you are using a domain, fill in https://DOMAIN (e.g. https://zeppelin.gg)
+     - if you are using an IP address, fill in https://IP
+   - `API_URL`: This is used by the dashboard to access the bot internals; also used by Discord to redirect you back to the dashboard after you log in.
+     - Use your dashboard URL, but add `/api` at the end (e.g. https://zeppelin.gg/api)
+   - `STAFF`: These are staff to help manage the bot itself. These are not server staff that would manage bot configs.
+     - In a self-hosted situation, it would most likely just be you.
+     - Get your Discord ID (an 18-20-digit number) and fill it in.
+     - If there will be multiple people managing the bot, separate the user IDs with commas.
+   - `DEFAULT_ALLOWED_SERVERS`: Normally servers need to be allowed before the bot can be added to it. Otherwise it leaves. This indicates the first server that the bot could be added to, where administrative commands can be run to allow other servers.
+     - Fill in the Discord server's ID.
+   - `PHISHERMAN_API_KEY`: Phisherman is a live database used for identifying malicious, scam, and phishing links. Uncomment the row if you have an api key.
+4. When you are done editing, press Ctrl-X, then Y, then Enter to save and exit Nano.
 
 ### Build the Bot and API
 
@@ -171,21 +179,6 @@ Please refer to the [Discord Bot Setup page](../discord/bot-creation/creation.md
    - Make sure there are no errors. If there are errors, try a Google search for your error, if that doesn't work then
      ask for help in the self-hosting server.
 2. Run migrations. This will set up the database structure and all the necessary tables. `npm run migrate-prod`
-
-### Set up Initial Database Entries
-
-Initial entries are needed to add the bot to a server without it leaving, future changes to the database should be down
-through the bot owner commands
-
-1. `sudo mariadb`
-   - or `sudo mariadb -p` as applicable
-2. `use zep;`
-3. `INSERT INTO allowed_guilds (id, name, icon, owner_id) VALUES ("SERVER_ID", "SERVER_NAME", null, "OWNER_ID");`
-   - Modify SERVER_ID, SERVER_NAME, OWNER_ID
-4. `` INSERT INTO configs (id, `key`, config, is_active, edited_by) VALUES (1, "global", "{\"prefix\": \"!\", \"url\": \"http://YOUR_IP:8800\" ,\"owners\": [\"YOUR_ID\"]}", true, "YOUR_ID"); ``
-   - Modify YOUR_ID X2; replace YOUR_IP with domain|ip as applicable
-5. `INSERT INTO api_permissions (guild_id, target_id, type, permissions) VALUES (GUILD_ID, YOUR_ID, "USER", "OWNER");`
-   - Modify GUILD_ID, YOUR_ID
 
 ### Start Bot and API
 

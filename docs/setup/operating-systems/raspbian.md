@@ -2,7 +2,7 @@
 title: <WIP> Raspbian
 description: Hosting both ends on Raspbian
 hide_table_of_contents: false
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 - [ ] rename this file to have a version
