@@ -1,11 +1,11 @@
 ---
-title: Custom Status
-description: How to set up a custom status for your bot
+title: Custom Activity
+description: How to set up a custom Activity for your bot
 hide_table_of_contents: false
 sidebar_position: 3
 ---
 
-1. Locate line 352 of [backend/src/index.ts](https://github.com/Dragory/ZeppelinBot/blob/master/backend/src/index.ts#L352).
+1. Locate line 346 of [backend/src/index.ts](https://github.com/Dragory/ZeppelinBot/blob/master/backend/src/index.ts#L346).
 2. Add e.g.,
 
    ```ts
@@ -14,8 +14,8 @@ sidebar_position: 3
    });
    ```
 
-   to line 353 (under `startUptimeCounter()`).
+   to line 346 (under `startUptimeCounter()`).
 
-   ![custom status](/img/guides/discord/custom_status.png "Custom Status")
+   ![custom activity](/img/guides/discord/custom_activity.png "Custom Activity")
 
 3. Rebuild & restart your instances.
