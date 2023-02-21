@@ -1,13 +1,13 @@
 ---
 title: Introduction
-description: Overview of the Community Patch
+description: Overview of the Community Patches
 hide_table_of_contents: false
 sidebar_position: 1
 ---
 
-## What is the Community Patch?
+## What is the Community Patches?
 
-The `Community Patch` is a collection of self-hosting "patches" for common-used functionality within the Zeppelin self-hosting community.
+The `Community Patches` are a collection of self-hosting "patches" for common-used functionality within the Zeppelin self-hosting community.
 
 ## How to use?
 

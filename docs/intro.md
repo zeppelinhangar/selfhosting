@@ -5,11 +5,13 @@ slug: /
 ---
 
 # Introduction
+
 ## What is Zeppelin?
 
 Zeppelin is a private moderation bot for Discord, designed with large servers and reliability in mind.
 
 With these docs, you will be able to selfhost your own Zeppelin instance
+
 ## Table of Content
 
 ### **[Setup Instructions](./setup/intro.md)**
