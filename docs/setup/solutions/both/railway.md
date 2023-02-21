@@ -1,10 +1,14 @@
 ---
-title: Railway Guide
+title: Railway Guide (Deprecated)
 description: Hosting on Railway.app
 hide_table_of_contents: false
 ---
 
 # Deploy [Zeppelin](https://zeppelin.gg) on [Railway](https://railway.app?referralCode=nebula)
+
+:::warn
+This guide is deperecated and **will likely not work** for you.
+:::
 
 ## Prerequisites
 

@@ -1,13 +1,13 @@
 ---
 title: Introduction
-description: Overview of the Community Patch
+description: Overview of the Community Patches
 hide_table_of_contents: false
 sidebar_position: 1
 ---
 
-## What is the Community Patch?
+## What is the Community Patches?
 
-The `Community Patch` is a collection of self-hosting "patches" for common-used functionality within the Zeppelin self-hosting community.
+The `Community Patches` are a collection of self-hosting "patches" for common-used functionality within the Zeppelin self-hosting community.
 
 ## How to use?
 
@@ -18,11 +18,11 @@ However, you can generate a patch file for any [PR](https://github.com/ZeppelinB
 :::info
 After applying a patch, you may need to perform any/all the following actions:
 
-> - Rebuild your [Bot Service](../../services/bot.md)
-> - Rebuild your [API Service](../../services/api.md)
+> - Rebuild your Bot Service
+> - Rebuild your API Service
 > - Run DB migrations (`npm run migrate-prod`)
-> - Redeploy your [Bot Service](../../services/bot.md)
-> - Redeploy your [API Service](../../services/api.md)
+> - Redeploy your Bot Service
+> - Redeploy your API Service
 
 **If you are not sure what actions to perform for a specific patch, just perform them all to be safe, they will also be specified on each patch's guide page.**
 :::

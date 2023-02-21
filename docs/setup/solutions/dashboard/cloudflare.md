@@ -1,10 +1,16 @@
 ---
-title: Cloudflare Guide
+title: Cloudflare Guide (Outdated)
 description: Hosting a dashboard on Cloudflare
 hide_table_of_contents: false
 ---
 
 # Dashboard Hosting on Cloudflare
+
+:::warn
+This guide is outdated and **will not work** for you.
+
+This is pending a update to the main repo to change how environment variables are loaded.
+:::
 
 ## Prerequisites
 
