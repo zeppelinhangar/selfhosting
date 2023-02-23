@@ -40,7 +40,7 @@ Hey! Hope you're doing alright, may I please get a key for my self-hosted Zeppel
 
 ## Using a Key
 
-You can now integrate it to Zeppelin on `backend/bot.env`:
+You can now integrate it to Zeppelin in your `.env`:
 
 > ```
 > PHISHERMAN_API_KEY=<your key>
