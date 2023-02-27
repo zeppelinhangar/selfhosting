@@ -25,7 +25,7 @@ plugins:
 
 ## Downloading the Patch
 
-Download the patch from [PR 296](https://patch-diff.githubusercontent.com/raw/ZeppelinBot/Zeppelin/pull/296.patch).
+Download the patch from [PR 390](https://patch-diff.githubusercontent.com/raw/ZeppelinBot/Zeppelin/pull/390.patch).
 
 ## Applying the Patch
 
