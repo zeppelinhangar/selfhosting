@@ -5,9 +5,9 @@ hide_table_of_contents: false
 sidebar_position: 1
 ---
 
-## What is the Community Patches?
+## What are the Community Patches?
 
-The `Community Patches` are a collection of self-hosting "patches" for common-used functionality within the Zeppelin self-hosting community.
+The `Community Patches` are a collection of applicable "patches" for common-requested functionality within the Zeppelin self-hosting community.
 
 ## How to use?
 
@@ -26,6 +26,14 @@ After applying a patch, you may need to perform any/all the following actions:
 
 **If you are not sure what actions to perform for a specific patch, just perform them all to be safe, they will also be specified on each patch's guide page.**
 :::
+
+## Updating patches
+
+Sometimes, patches will be updated, in case you had already previously applied the patch, you will get `git am` errors when running the command again.
+These errors can be for one of two reasons:
+
+> - You already applied that commit (in this case you can just run `git am --skip` to skip applying it again)
+> - Another commit made changes to a previous commit and created merge issues (in this case you will have to resolve merge issues before continuing)
 
 ## Outdated patch disclaimer
 
