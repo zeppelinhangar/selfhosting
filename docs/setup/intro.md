@@ -5,11 +5,9 @@ sidebar_position: 1
 position: 2
 ---
 
-# About
-
 This section contains detailed guides for self-hosting the private Discord bot [Zeppelin](https://zeppelin.gg)
 
-# Recommended prerequisites
+## Recommended prerequisites
 
 Before attempting to self-host Zeppelin, you should have basic experience with
 
@@ -20,7 +18,7 @@ Before attempting to self-host Zeppelin, you should have basic experience with
 
 Not only will this make the setup process easier, but it will also allow you to diagnose any issues you may run into in the future
 
-# Operating Systems
+## Operating Systems
 
 The only guide we provide is for **[Docker on Linux](./operating-systems/linux-docker.md)**, and you will not receive support in the server if you use an operating system such as Windows.
 

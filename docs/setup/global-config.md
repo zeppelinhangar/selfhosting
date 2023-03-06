@@ -9,8 +9,6 @@ position: 5
 Instead, check the [Default BotControl Overrides Patch](../patch/default-bc-overrides.md)!
 :::
 
-# Global Config
-
 The `global` config is the configuration which lets you define some global variables and permissions for your instance.
 It is important that you define it.
 

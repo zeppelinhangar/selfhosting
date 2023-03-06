@@ -2,9 +2,7 @@
 title: Getting Help
 ---
 
-# How to get help
-
-# Discord Server
+## Discord Server
 
 **Join our self-hosting support server**: [https://discord.gg/uTcdUmF6Q7](https://discord.gg/uTcdUmF6Q7)
 

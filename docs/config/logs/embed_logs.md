@@ -4,8 +4,6 @@ sidebar_position: 1
 position: 1
 ---
 
-# Embed Logs
-
 ### Emoji Mention
 
 All emoji used within these logs is from [The Hangar](https://discord.gg/uTcdUmF6Q7) server, however, due to Zeppelin logs using webhooks to send messages, you will be able to access these emoji even if your bot user is not on the server, so long as your bot has the `Use External Emojis` permission.

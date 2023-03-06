@@ -3,8 +3,6 @@ title: Bot Control
 position: 5
 ---
 
-# Bot Control
-
 `bot_control` is the Zeppelin plugin which lets you manage your instance (i.e. allowing other servers)
 
 ## Command Access

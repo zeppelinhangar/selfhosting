@@ -9,13 +9,9 @@ sidebar_position: 2
 This method of self-hosting is now deprecated, see the guide for docker [here](./linux-docker.md)
 :::
 
-# Ubuntu Setup
-
 :::info
 This guide was written and tested for **Ubuntu 18.04.6 LTS**
 :::
-
-## Intro
 
 In case you haven't done so already, take a look at the [Introduction](../intro.md) :triumph:
 

@@ -5,10 +5,6 @@ hide_table_of_contents: false
 sidebar_position: 1
 ---
 
-# Linux Setup
-
-# Intro
-
 In case you haven't done so already, take a look at the [Introduction](../intro.md) :triumph:
 
 This guide assumes the host is a new VPS without anything else running. If you run this on an existing host or on a local machine, you may run into issues not covered by this guide.
