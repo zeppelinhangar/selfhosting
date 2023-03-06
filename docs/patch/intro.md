@@ -74,3 +74,7 @@ Adds better archiving capabilities to zeppelin
 ### [Better Dashboard Management](./better-dashboard-management.md)
 
 Spoofs API permissions for Zeppelin STAFF users so that they have access to all servers without modifying your database
+
+### [Hangar Emoji](./hangar-emoji.md)
+
+Changes your case icon and success emoji icon to use emoji from [The Hangar](https://discord.gg/uTcdUmF6Q7) discord server
