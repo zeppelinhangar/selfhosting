@@ -11,7 +11,7 @@ The `Community Patches` are a collection of applicable "patches" for common-requ
 
 ## How to use?
 
-Right now, patches are being added manually to the [patches repository,](https://github.com/zeppelinhangar/community-patch/patches) and you can apply them to your own instance by downloading the patch and running `git am <path to file>`.
+Right now, patches are being added manually to the [patches repository,](https://github.com/zeppelinhangar/community-patch/tree/main/patches) and you can apply them to your own instance by downloading the patch and running `git am <path to file>`.
 
 However, you can generate a patch file for any [PR](https://github.com/ZeppelinBot/Zeppelin/pulls) by appending `.patch` to the URL.
 
