@@ -10,6 +10,10 @@ position: 1
 
 All emoji used within these logs is from [The Hangar](https://discord.gg/uTcdUmF6Q7) server, however, due to Zeppelin logs using webhooks to send messages, you will be able to access these emoji even if your bot user is not on the server, so long as your bot has the `Use External Emojis` permission.
 
+If you would like your bot to have access to the emoji on the server, join us and look at the `#add-your-bot` channel!
+
+You can then apply the [Hangar Emoji Patch](../../patch/hangar-emoji.md) on your instance so it uses those emoji!
+
 #### Name in config: `logs`
 
 ````yaml
