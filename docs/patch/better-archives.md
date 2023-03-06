@@ -34,8 +34,8 @@ Download the patch from [here](https://github.com/zeppelinhangar/community-patch
 :::info
 In order to apply the patch you will need to rebuild and redeploy your Bot Service, as well as run DB migrations.
 
-You will also need to add the `dashboard_url` key to the top-level of your instance's **[global config](../setup/global-config.md)** (with your dashboard's URL)
-:::
+> You will also need to add the `dashboard_url` key to the top-level of your instance's **[`global` config key](../setup/global-config.md)** (with your dashboard's URL)
+> :::
 
 ## Respective Patches
 

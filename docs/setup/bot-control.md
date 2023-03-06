@@ -15,11 +15,13 @@ In order to use these commands, you will need to have your discord user ID defin
 
 ### permission-requiring commands
 
-In order to use these commands, you will need to have the assigned permissions, regardless of being in the `STAFF` environment variable.
+**In order to use these commands, you will need to have the assigned permissions, regardless of being in the `STAFF` environment variable.**
 
-This means that you will need to add/edit your `global` config key directly on your `configs` table in your database (in JSON format)
+This means that you will need to add/edit your **[`global` config key](./global-config.md)** directly on your `configs` table in your database (in JSON format)
 
 Take a look at the [global config guide](./global-config.md) for more information on this.
+
+> Alternatively, check the [Default BotControl Overrides Patch](../patch/default-bc-overrides.md) that adds these automatically for `STAFF` users
 
 ## Command List
 

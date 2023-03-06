@@ -3,6 +3,12 @@ title: Global Configuration
 position: 5
 ---
 
+:::info
+**Setting up your global config in order to have access to all global commands?**
+
+Instead, check the [Default BotControl Overrides Patch](../patch/default-bc-overrides.md)!
+:::
+
 # Global Config
 
 The `global` config is the configuration which lets you define some global variables and permissions for your instance.

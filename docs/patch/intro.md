@@ -78,3 +78,7 @@ Spoofs API permissions for Zeppelin STAFF users so that they have access to all 
 ### [Hangar Emoji](./hangar-emoji.md)
 
 Changes your case icon and success emoji icon to use emoji from [The Hangar](https://discord.gg/uTcdUmF6Q7) discord server
+
+### [Default BotControl Overrides](./default-bc-overrides.md)
+
+Adds overrides to the `bot_control` plugin so that all `STAFF` users have access to all Zeppelin global commands by default
