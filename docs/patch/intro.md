@@ -65,4 +65,4 @@ Adds better archiving capabilities to zeppelin
 
 ### [Better Dashboard Management](./better-dashboard-management.md)
 
-Adds better dashboard management capabilities to zeppelin
+Spoofs API permissions for Zeppelin STAFF users so that they have access to all servers without modifying your database
