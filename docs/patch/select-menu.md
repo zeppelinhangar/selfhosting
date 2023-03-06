@@ -5,6 +5,10 @@ hide_table_of_contents: false
 sidebar_position: 2
 ---
 
+:::warning
+This patch is currently not functioning on latest and needs a fix.
+:::
+
 :::info
 This patch was tested for [master@280543d](https://github.com/ZeppelinBot/Zeppelin/commit/280543df4e45bfebb27c1c8142c787ecbfb6fc2a)
 :::
