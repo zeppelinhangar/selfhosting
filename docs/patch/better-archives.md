@@ -20,6 +20,8 @@ The better archives patch adds:
 > Higher clean command limits and message retentions
 >
 > Database performance improvements to queries for the `messages` table
+>
+> Better-looking archive view webpage (and archives are now based on the dashboard)
 
 ## Downloading the Patch
 
@@ -31,6 +33,7 @@ Download the patch from [here](https://github.com/zeppelinhangar/community-patch
 
 :::info
 In order to apply the patch you will need to rebuild and redeploy your Bot Service, as well as run DB migrations.
+You will also need to add the `dashboard_url` key to the top-level of your instance's **[global config](../setup/global-config.md)** (with your dashboard's URL)
 :::
 
 ## Respective Patches
