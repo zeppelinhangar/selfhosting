@@ -82,3 +82,7 @@ Changes your case icon and success emoji icon to use emoji from [The Hangar](htt
 ### [Default BotControl Overrides](./default-bc-overrides.md)
 
 Adds overrides to the `bot_control` plugin so that all `STAFF` users have access to all Zeppelin global commands by default
+
+### [Tags Counter Getters](./tags-counter-getters.md)
+
+Adds template functions to the tags plugin to enable you to dynamically pull counter values
