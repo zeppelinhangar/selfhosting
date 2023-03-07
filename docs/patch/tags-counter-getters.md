@@ -16,6 +16,9 @@ Due to how this patch is implemented, it is highly possible that a SQL injection
 
 :::info
 This patch was tested for [master@801cd26](https://github.com/ZeppelinBot/Zeppelin/commit/801cd2630b5d75dd3c2d132d13a87cd05da0931a)
+
+**This patch does not work on a vanilla Zepppelin Instance hosted on Docker due to it using `mysql`.
+This patch requires `mariadb`.** To use this patch on docker, replace [line 15 and 16](https://github.com/ZeppelinBot/Zeppelin/blob/master/docker-compose.production.yml#L15-L16) with `mariadb`, and `mariadb:10` respectively.
 :::
 
 ## What is this?
