@@ -18,11 +18,18 @@ However, you can generate a patch file for any [PR](https://github.com/ZeppelinB
 :::info
 After applying a patch, you may need to perform any/all the following actions:
 
-> - Rebuild your Bot Service
-> - Rebuild your API Service
-> - Run DB migrations (`npm run migrate-prod`)
-> - Redeploy your Bot Service
-> - Redeploy your API Service
+<details>
+    <summary>For a locally hosted zeppelin</summary>
+    <p>Rebuild your Bot Service</p>
+    <p>Rebuild your API Service</p>
+    <p>Run DB migrations (<code>npm run migrate-prod</code>)</p>
+    <p>Redeploy your Bot Service</p>
+    <p>Redeploy your API Service</p>
+</details>
+<details>
+    <summary>For a zeppelin hosted on docker</summary>
+    Restart the bot, by i.e running: <code>bash ./update.sh</code> (from the project root)
+</details>
 
 **If you are not sure what actions to perform for a specific patch, just perform them all to be safe, they will also be specified on each patch's guide page.**
 :::
@@ -42,7 +49,7 @@ Each patch will have on its guide page documented the GitHub commit it was teste
 All patches are maintained by the community and as thus are not guaranteed to always be up-to-date or functioning.
 
 :::note
-If a patch does not work on latest of [the main repo](https://github.com/ZeppelinBot/Zeppelin), please let us know on our [discord server](https://discord.gguTcdUmF6Q7)
+If a patch does not work on latest of [the main repo](https://github.com/ZeppelinBot/Zeppelin), please let us know on our [discord server](https://discord.gg/uTcdUmF6Q7)
 :::
 
 ## Patch list
