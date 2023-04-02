@@ -58,10 +58,6 @@ If a patch does not work on latest of [the main repo](https://github.com/Zeppeli
 
 Adds select-menu role pickers
 
-### [Timeout Support](./timeouts.md)
-
-Adds timeout support for mutes
-
 ### [Social Media Poster](./social-media.md)
 
 Adds automatic feeds for social media

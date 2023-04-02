@@ -6,7 +6,7 @@ sidebar_position: 2
 ---
 
 :::warning
-This patch is currently not functioning on latest and needs a fix.
+This patch is deprecated
 :::
 
 :::info
