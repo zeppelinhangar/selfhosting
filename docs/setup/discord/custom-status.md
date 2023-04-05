@@ -14,7 +14,7 @@ sidebar_position: 3
    });
    ```
 
-   to line 346 (under `startUptimeCounter()`).
+   to line 360 (under `startUptimeCounter()`).
 
    ![custom activity](/img/guides/discord/custom_activity.png "Custom Activity")
 
