@@ -5,7 +5,7 @@ hide_table_of_contents: false
 sidebar_position: 3
 ---
 
-1. Locate line 346 of [backend/src/index.ts](https://github.com/Dragory/ZeppelinBot/blob/master/backend/src/index.ts#L346).
+1. Locate line 360 of [backend/src/index.ts](https://github.com/Dragory/ZeppelinBot/blob/master/backend/src/index.ts#L360).
 2. Add e.g.,
 
    ```ts
@@ -14,7 +14,7 @@ sidebar_position: 3
    });
    ```
 
-   to line 346 (under `startUptimeCounter()`).
+   to line 360 (under `startUptimeCounter()`).
 
    ![custom activity](/img/guides/discord/custom_activity.png "Custom Activity")
 
