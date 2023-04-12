@@ -37,7 +37,7 @@ Additionally, it also provides manage access permission for one hour to the pers
 
 #### Disallow Server
 
-> Usage: `@bot allow_server <guild_id>`
+> Usage: `@bot disallow_server <guild_id>`
 
 > Aliases: `disallowserver`, `remove_server`, `removeserver`
 
