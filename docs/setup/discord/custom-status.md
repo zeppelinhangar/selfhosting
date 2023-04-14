@@ -10,7 +10,7 @@ sidebar_position: 3
 
    ```ts
    client.user?.setPresence({
-     activities: [{ name: "zeppelins", type: "WATCHING" }],
+     activities: [{ name: "zeppelins", type: ActivityType.Watching }],
    });
    ```
 
