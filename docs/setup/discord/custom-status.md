@@ -14,7 +14,7 @@ sidebar_position: 3
    });
    ```
 
-   to line 360 (under `startUptimeCounter()`).
+   to line 360 (under `startUptimeCounter()`). You can find all of the different ActivityType's [here](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType).
 
    ![custom activity](/img/guides/discord/custom_activity.png "Custom Activity")
 
