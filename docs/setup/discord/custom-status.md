@@ -5,7 +5,10 @@ hide_table_of_contents: false
 sidebar_position: 3
 ---
 
-1. Locate line 360 of [backend/src/index.ts](https://github.com/Dragory/ZeppelinBot/blob/master/backend/src/index.ts#L360).
+1. Add the following import to [backend/src/index.ts](https://github.com/Dragory/ZeppelinBot/blob/master/backend/src/index.ts).
+   ```ts
+   import { ActivityType } from "discord.js"
+   ```
 2. Add e.g.,
 
    ```ts
