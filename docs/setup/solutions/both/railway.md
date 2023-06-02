@@ -1,146 +1,91 @@
 ---
-title: Railway Guide (Deprecated)
+title: Railway Guide
 description: Hosting on Railway.app
 hide_table_of_contents: false
 ---
 
-# Deploy [Zeppelin](https://zeppelin.gg) on [Railway](https://railway.app?referralCode=nebula)
-
-:::warning
-This guide is deperecated and **will likely not work** for you.
-:::
+# Deploy [Zeppelin](https://zeppelin.gg) on [Railway](https://railway.app?referralCode=VTVa-k)
 
 ## Prerequisites
 
-- [Railway Account](https://railway.app?referralCode=nebula) - connected to GitHub
+- [Railway Account](https://railway.app?referralCode=VTVa-k) - connected to GitHub
 - [Discord Account](https://discord.com)
 - [GitHub Account](https://github.com) - older than 30 days
 
-1. Link your Discord account to Railway from account settings. **[REQUIRED]**
-2. Run the `/beta` slash command in the Railway Discord Server.
+Click on the deploy link above. You should see something like this: ![Deploy page](/img/guides/railway/deploy_landing.png)
+Then, click on "Deploy Now".
 
-## Setting up the Railway Project
+## Set up the Discord bot
 
-Create a new project, provisioned with the MySQL Plugin
-![Provision MySQL](/img/guides/railway/provision_mysql.png "Provision MySQL")
+Please refer to the [Discord Bot Setup page](../../discord/bot-creation/creation.md).
+But do not fill in the OAuth URL just yet.
 
-1. Run Control/Command + K and select 'Metrofy'.
-2. Fork [this repo](https://github.com/nebulatgs/zeppelin-railway/fork), we're going to deploy it next.
+## Deploying
+### The actual bot
+Click on "Configure". You should see something like this: ![Expanded box after clicking configure](/img/guides/railway/bot.png)
 
-## Creating the API Service
+First, we have the Respository Details:
+    - Select the account/organization to clone the project.
+    - Give your bot repo a unique name. Eg: `zeppelin-bot`, `zepp-backend`.
+    - Whether or not the repo should be private, i.e, people that you do not add, have no access to the code.
 
-Select New Service and pick GitHub Repo, selecting your fork
+Next, We have the environment variables:
+    - `KEY`: A 32 Character encryption key.
+        - If you're on a linux machine, run `openssl rand -hex 16`, you should get an output like: `2df1a26aca2ca386924a4ef00b22f300`
+        - Else, just generate a string, 32 characters long, letters and numbers only.
+    - `BOT_TOKEN`: Your bot's token that allows it to access Discord.
+        - Found on the `Bot` page of the Discord Dev Portal.
+    - `DEFAULT_ALLOWED_SERVERS`: Normally servers need to be allowed before the bot can be added to it. Otherwise it leaves. This indicates the first server that the bot could be added to, where administrative commands can be run to allow other servers.
+        - Fill in your Discord server's ID.
+    - Click on the dropdown button
+   - `STAFF`: These are staff to help manage the bot itself. These are not server staff that would manage bot configs.
+     - In a self-hosted situation, it would most likely just be you.
+     - Get your Discord ID (an 18-20-digit number) and fill it in.
+     - If there will be multiple people managing the bot, separate the user IDs with commas.
+    - `GIT_REPO`: If you have cloned the Zeppelin repo have modified it and want to run with those changes
 
-Once the service has deployed (it may fail to build, that is ok), select it and
-go to Settings.
+And we're done! Just click "Save Config".
 
-Rename the service if you would like and set the root directory to `/api`
+### The API Service
+![API Service](/img/guides/railway/api.png)
 
-> **OPTIONAL: FOR USERS WITH CUSTOM FORKS OF ZEPPELIN**
->
-> _Note: may not build, as patch-files are based off of upstream_
->
-> Create a variable name `GIT_REPO` and set it to the url to your custom fork of Zeppelin
->
-> ```bash
->  # Optional, for advanced users (replace with your custom fork)
->  GIT_REPO=https://github.com/Dragory/ZeppelinBot.git
-> ```
+Environment Variables:
+    - `CLIENT_ID`: This is the ID of the bot you created above in the Discord developer portal.
+    - `CLIENT_SECRET`: This is the secret from the Oauth page in the Discord developer portal.
+    - Click on the dropdown button
+    - Use the same values you used for `STAFF`, `DEFAULT_ALLOWED_SERVERS`, and `KEY`.
 
-1. Create a variable named `KEY` and set it to
-   [32 random characters](https://passwordsgenerator.net/?length=32&symbols=0&numbers=1&lowercase=1&uppercase=1&similar=0&ambiguous=0&client=1&autoselect=0).
+### The Dashboard
+![Dasboard](/img/guides/railway/api.png)
 
-```bash
-# Example (don't use this):
-KEY=eilegiluegoigefiugsdzdiuggfweaiug
+Environment Variables:
+    - `GIT_REPO`: If you have cloned the Zeppelin repo have modified it and want to run with those changes
+
+Click the "Deploy" Button, and you're almost done.
+
+Before you're running off to the races, it is necessary to set the mysql database's password properly.
+
+### The Database
+Once you've deployed, click on the database container and go to the connect tab.
+Copy the variable for the `MYSQLPASSWORD` variable
+![Connect Tab](/img/guides/railway/db_connect.png)
+
+Next, head to the Query Tab and enter the following:
+```sql
+ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'VALUE_OF_MYSQL_PASSWORD';
 ```
 
-2. Create a variable named `STAFF` and set it to your Discord Snowflake.
+Click "Run Query" and then ```sql
+flush privileges;
+``` and run the query again.
+![Query Tab](/img/guides/railway/db_query.png)
 
-```bash
-# Replace with your snowflake
-STAFF=524722785302609941
-```
 
-3. Copy the following variables into the api service (tip: Bulk Import)
+### Finishing
+Now, redeploy the API and bot.
+Once the API is done building, use the Filter bar and search for "oauth".
+![Api Logs](/img/guides/railway/api_logs.png)
 
-```bash
-DB_PASSWORD=${{ MYSQLPASSWORD }}
-DB_USER=${{ MYSQLUSER }}
-DB_HOST=${{ MYSQLHOST }}
-DB_PORT=${{ MYSQLPORT }}
-DB_DATABASE=${{ MYSQLDATABASE }}
-PROFILING=false
-PORT=8800
-OAUTH_CALLBACK_URL=https://${{ RAILWAY_STATIC_URL }}/auth/oauth-callback
-```
+Now, go back to Discord Developer Portal and use this url for the OAuth Callback.
 
-4. Complete [Discord Bot Setup page](../../Discord/bot-creation/creation), then copy these variables from OAuth:
-
-```bash
-CLIENT_SECRET=<OAuth Client Secret>
-CLIENT_ID=<OAuth Client ID>
-```
-
-## Creating the Bot Service
-
-1. Deploy your fork again by creating a new service, like you did for the api.
-2. Rename the service if you would like and set the root directory to `/bot`
-3. Create the following variables:
-
-```bash
-# Pick a root server to add the bot to
-SERVER_NAME=<Server Name>
-SERVER_ID=<Server Snowflake>
-OWNER_ID=<Server Owners User Snowflake>
-
-# General vars
-ACCOUNT_ID=<Your User Snowflake (from api step)>
-TOKEN=<Bot Token>
-```
-
-## Initializing the Database
-
-1. Clone your fork of this repo, make sure Node.js and Railway CLI are installed.
-2. Open a terminal and enter the `init-db` folder.
-3. Run `npm ci` to install deps.
-4. Run `railway run node .` to set up the database, Control + C once it stops logging. (To be fixed)
-
-## Creating the Dashboard Service
-
-Deploy your fork again by creating a new service, like you did for the bot.
-Rename the service if you would like and set the root directory to `/dashboard`
-Create a variable named `API_URL` and set it to the url Railway generated for the api service.
-
-```bash
-# Make sure there is no trailing slash
-API_URL=https://example.up.railway.app
-
-# Also add PORT
-PORT=80
-```
-
-## Connecting the Dashboard and API
-
-Go back to the api service and add a variable named `DASHBOARD_URL` set to the
-generated url for the dashboard
-
-```bash
-# Make sure there is no trailing slash
-DASHBOARD_URL=https://example.up.railway.app
-```
-
-## Setting up OAuth Callbacks
-
-Go your bot's [Discord Application](https://discord.com/developers/applications)
-
-Under OAuth, add a callback url set to:
-
-```bash
-$API_URL + '/auth/oauth-callback'
-
-EXAMPLE:
-API_URL=https://example.up.railway.app
-
-CALLBACK=https://example.up.railway.app/auth/oauth-callback
-```
+And there you go, a fully functioning Zeppelin hosted on railway.
