@@ -25,24 +25,24 @@ But do not fill in the OAuth URL just yet.
 Click on "Configure". You should see something like this: ![Expanded box after clicking configure](/img/guides/railway/bot.png)
 
 First, we have the Respository Details:
-    - Select the account/organization to clone the project.
-    - Give your bot repo a unique name. Eg: `zeppelin-bot`, `zepp-backend`.
-    - Whether or not the repo should be private, i.e, people that you do not add, have no access to the code.
+  - Select the account/organization to clone the project.
+  - Give your bot repo a unique name. Eg: `zeppelin-bot`, `zepp-backend`.
+  - Whether or not the repo should be private, i.e, people that you do not add, have no access to the code.
 
 Next, We have the environment variables:
-    - `KEY`: A 32 Character encryption key.
-        - If you're on a linux machine, run `openssl rand -hex 16`, you should get an output like: `2df1a26aca2ca386924a4ef00b22f300`
-        - Else, just generate a string, 32 characters long, letters and numbers only.
-    - `BOT_TOKEN`: Your bot's token that allows it to access Discord.
-        - Found on the `Bot` page of the Discord Dev Portal.
-    - `DEFAULT_ALLOWED_SERVERS`: Normally servers need to be allowed before the bot can be added to it. Otherwise it leaves. This indicates the first server that the bot could be added to, where administrative commands can be run to allow other servers.
-        - Fill in your Discord server's ID.
-    - Click on the dropdown button
-   - `STAFF`: These are staff to help manage the bot itself. These are not server staff that would manage bot configs.
-     - In a self-hosted situation, it would most likely just be you.
-     - Get your Discord ID (an 18-20-digit number) and fill it in.
-     - If there will be multiple people managing the bot, separate the user IDs with commas.
-    - `GIT_REPO`: If you have cloned the Zeppelin repo have modified it and want to run with those changes
+  - `KEY`: A 32 Character encryption key.
+    - If you're on a linux machine, run `openssl rand -hex 16`, you should get an output like: `2df1a26aca2ca386924a4ef00b22f300`
+    - Else, just generate a string, 32 characters long, letters and numbers only.
+  - `BOT_TOKEN`: Your bot's token that allows it to access Discord.
+    - Found on the `Bot` page of the Discord Dev Portal.
+  - `DEFAULT_ALLOWED_SERVERS`: Normally servers need to be allowed before the bot can be added to it. Otherwise it leaves. This indicates the first server that the bot could be added to, where administrative commands can be run to allow other servers.
+    - Fill in your Discord server's ID.
+  - Click on the dropdown button
+  - `STAFF`: These are staff to help manage the bot itself. These are not server staff that would manage bot configs.
+    - In a self-hosted situation, it would most likely just be you.
+    - Get your Discord ID (an 18-20-digit number) and fill it in.
+    - If there will be multiple people managing the bot, separate the user IDs with commas.
+  - `GIT_REPO`: If you have cloned the Zeppelin repo have modified it and want to run with those changes
 
 And we're done! Just click "Save Config".
 
@@ -50,16 +50,16 @@ And we're done! Just click "Save Config".
 ![API Service](/img/guides/railway/api.png)
 
 Environment Variables:
-    - `CLIENT_ID`: This is the ID of the bot you created above in the Discord developer portal.
-    - `CLIENT_SECRET`: This is the secret from the Oauth page in the Discord developer portal.
-    - Click on the dropdown button
-    - Use the same values you used for `STAFF`, `DEFAULT_ALLOWED_SERVERS`, and `KEY`.
+  - `CLIENT_ID`: This is the ID of the bot you created above in the Discord developer portal.
+  - `CLIENT_SECRET`: This is the secret from the Oauth page in the Discord developer portal.
+  - Click on the dropdown button
+  - Use the same values you used for `STAFF`, `DEFAULT_ALLOWED_SERVERS`, and `KEY`.
 
 ### The Dashboard
 ![Dasboard](/img/guides/railway/api.png)
 
 Environment Variables:
-    - `GIT_REPO`: If you have cloned the Zeppelin repo have modified it and want to run with those changes
+  - `GIT_REPO`: If you have cloned the Zeppelin repo have modified it and want to run with those changes
 
 Click the "Deploy" Button, and you're almost done.
 
