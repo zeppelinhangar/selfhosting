@@ -75,9 +75,11 @@ Next, head to the Query Tab and enter the following:
 ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'VALUE_OF_MYSQL_PASSWORD';
 ```
 
-Click "Run Query" and then ```sql
+Click "Run Query" and then
+```sql
 flush privileges;
-``` and run the query again.
+```
+and run the query again.
 ![Query Tab](/img/guides/railway/db_query.png)
 
 
