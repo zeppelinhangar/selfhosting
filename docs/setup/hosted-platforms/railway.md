@@ -19,6 +19,8 @@ Depending on usage, it's likely that it will end up being free, however you will
 - [GitHub Account](https://github.com) - older than 30 days
 - Debit/Credit card (If you want unlimited execution hours)
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/ZsenH2?referralCode=VTVa-k)
+
 Click on the deploy link above. You should see something like this: ![Deploy page](/img/guides/railway/deploy_landing.png)
 Then, click on "Deploy Now".
 
