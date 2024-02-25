@@ -174,10 +174,9 @@ This creates a folder called Zeppelin and clones the bot code there.
 
 ## Build and Start the bot
 
-`docker compose -f docker-compose.production.yml build
-docker compose -f docker-compose.production.yml up -d`
+`docker compose -f docker-compose.production.yml up -d --build`
 
-**NOTE**: Make sure to `build` the bot every time you update/change the source code.
+**NOTE**: Make sure to run the above command every time you update/change the source code.
 
 The bot will pull images and build other images, create the containers, and start them. It will probably take about a minute or two to start.
 
