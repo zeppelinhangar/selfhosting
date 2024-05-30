@@ -147,8 +147,9 @@ This creates a folder called Zeppelin and clones the bot code there.
    - `CLIENT_SECRET`: This is the secret from the Oauth page in the Discord developer portal
    - `BOT_TOKEN`: This is the bot token from the Bot page in the Discord developer portal.
    - `DASHBOARD_URL`: This is the URL you and other bot managers will use to access the dashboard to manage server configs
-     - If you are using a domain, fill in https://DOMAIN (e.g. https://zeppelin.gg)
-     - if you are using an IP address, fill in https://IP
+     - If you are using a domain, fill in http://DOMAIN (e.g. http://zeppelin.gg)
+     - if you are using an IP address, fill in http://IP
+     - Change http to https if you will implement SSL in some way. By default Zeppelin does not set one up.
    - `API_URL`: This is used by the dashboard to access the bot internals; also used by Discord to redirect you back to the dashboard after you log in.
      - Use your dashboard URL, but add `/api` at the end (e.g. https://zeppelin.gg/api)
    - `STAFF`: These are staff to help manage the bot itself. These are not server staff that would manage bot configs.
@@ -158,23 +159,33 @@ This creates a folder called Zeppelin and clones the bot code there.
    - `DEFAULT_ALLOWED_SERVERS`: Normally servers need to be allowed before the bot can be added to it. Otherwise it leaves. This indicates the first server that the bot could be added to, where administrative commands can be run to allow other servers.
      - Fill in the Discord server's ID.
    - `PHISHERMAN_API_KEY`: Phisherman is a live database used for identifying malicious, scam, and phishing links. Uncomment the row if you have an api key.
-   - `DOCKER_USER_UID`: Paste in the output of `id -u` from Step 3 above
-   - `DOCKER_USER_GID`: Paste in the output of `id -g` from Step 3 above
-   - `DOCKER_PROD_DOMAIN`: If you are using a domain to access the dashboard, put the domain here
-     - Put only the domain (e.g. zeppelin.gg) and not the URL.
-   - `DOCKER_PROD_WEB_PORT`: The port used to access the dashboard.
-     - If you have a webserver or another service that uses port 443 running on the host computer, change the port to something else, e.g. 444
-   - `DOCKER_PROD_MYSQL_PORT`: This will allow you to access the dashboard from the host computer or another computer using a program such as DBeaver.
-     - It does not need to be changed unless there is a port conflict with the host computer.
-   - `DOCKER_PROD_MYSQL_PASSWORD`: Database access password for the zeppelin user.
-     - Do not use `$'"(){}#` in the password
-   - `DOCKER_PROD_MYSQL_ROOT_PASSWORD`: Database access password for the root user
-     - Do not use `$'"(){}#` in the password
+   - DEVELOPMENT: Skip the entire section
+   - STANDALONE: Fill in this section unless you already have a MySQL database service set up that you would like to use with Zeppelin. If you don't know, you don't, and fill in this section.
+     - STANDALONE_WEB_PORT: Leave this alone unless port 80 on the host computer is already occupied. If it is, change it to something like 81 or 82. If you change this value, go back up to DASHBOARD_URL and API_URL and add a port after the domain or IP. For example: http://zeppelin.gg:81 or http://8.8.8.8:81 for the dashboard and http://zeppelin.gg:81/api or http://8.8.8.8:81/api for the api.
+     - STANDALONE_MYSQL_PORT: This will allow you to access the dashboard from the host computer or another computer using a program such as DBeaver.
+       - It does not need to be changed unless there is a port conflict with the host computer.
+     - STANDALONE_MYSQL_PASSWORD: Database access password for the zeppelin user.
+       - Do not use `$'"(){}#` in the password
+     - STANDALONE_MYSQL_ROOT_PASSWORD: Database access password for the root user
+       - Do not use `$'"(){}#` in the password
+   - LIGHTWEIGHT: Fill in this section only if you already have a MySQL database service set up that you would like to use with Zeppelin. If you filled in the Standalone section above, skip this one.
+     - LIGHTWEIGHT_API_PORT: Port with which the API will be accessible to the host computer and to the public. Change if there's a conflict on the host computer.
+     - LIGHTWEIGHT_DASHBOARD_PORT: Port with which the dashboard will be accessible to the host computer and to the public. Change if there's a conflict on the host computer.
+     - LIGHTWEIGHT_DB_HOST: URL or IP of the MySQL database you will use for Zeppelin
+     - LIGHTWEIGHT_DB_PORT: Port of the MySQL database. Default is 3356
+     - LIGHTWEIGHT_DB_USER: User of the MySQL database specifically for Zeppelin. For security reasons, try not to use the root user.
+     - LIGHTWEIGHT_DB_PASSWORD: Password of the database user Zeppelin will use.
+     - LIGHTWEIGHT_DB_DATABASE: Name of the database
+     - LIGHTWEIGHT_API_PATH_PREFIX: This allows you to set the route prefix for the api. If you don't know what this means, leave it blank.
+
 5. When you are done editing, press Ctrl-X, then Y, then Enter to save and exit Nano.
 
 ## Build and Start the bot
 
-`docker compose -f docker-compose.production.yml up -d --build`
+- If you filled in the Standalone section in the env file:
+  - `docker compose -f docker-compose.standalone.yml up -d --build`
+- If you filled in the Lightweight section in the env file:
+  - `docker compose -f docker-compose.lightweight.yml up -d --build`
 
 **NOTE**: Make sure to run the above command every time you update/change the source code.
 
