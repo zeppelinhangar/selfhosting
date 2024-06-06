@@ -7,13 +7,13 @@ sidebar_position: 3
 
 1. Add the following import to [backend/src/index.ts](https://github.com/Dragory/ZeppelinBot/blob/master/backend/src/index.ts).
    ```ts
-   import { ActivityType } from "discord.js";
+   import { ActivityTypes } from "discord.js";
    ```
 2. Add e.g.,
 
    ```ts
    client.user?.setPresence({
-     activities: [{ name: "zeppelins", type: ActivityType.Watching }],
+     activities: [{ name: "zeppelins", type: ActivityTypes.Watching }],
    });
    ```
 
