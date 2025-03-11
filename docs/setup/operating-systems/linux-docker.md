@@ -79,30 +79,34 @@ If `docker ps` does not yield any running containers, then continue on with the 
 
 Follow these instructions even if you do not have Docker installed, just to be sure that all traces of Docker are removed from your system to avoid interference later on.
 
-`sudo apt-get remove docker docker-engine docker.io containerd runc`
+`for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done`
 
 It's ok if it reports that none of these packages are installed.
 
 ### Install Docker
 
-1. `sudo apt-get install ca-certificates curl gnupg lsb-release`
+1. `sudo apt-get install ca-certificates curl`
 
 This installs packages needed for the actual installation step.
 
 In order to install Docker, we need to add the package repository.
 
 2. Add Docker's official GPG key:
-   `sudo mkdir -p /etc/apt/keyrings`
-   `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
+   `sudo install -m 0755 -d /etc/apt/keyrings`
+   `sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`
+   `sudo chmod a+r /etc/apt/keyrings/docker.asc`
 
 3. Set up the repository:
-   `echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
+   `echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
 
 4. Update the apt index
    `sudo apt-get update`
 
 5. Install Docker, Compose, and dependencies
-   `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
+   `sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
 
 ### Running Docker without sudo
 
@@ -110,7 +114,7 @@ In order to install Docker, we need to add the package repository.
 
 In order to run Docker without sudo, we need to make sure the docker group is created and that the user is added to that group.
 
-1. `sudo groupadd docker`
+1. `sudo groupadd docker` (this might tell you that the group already exists; then just move on to the next step)
 2. `sudo usermod -aG docker $USER`
 3. Log out and back in to see the changes. If you are running a virtual machine, you may need to restart the virtual machine.
 4. Make sure you can run docker without sudo: `docker ps`
@@ -118,6 +122,7 @@ In order to run Docker without sudo, we need to make sure the docker group is cr
 ## Set up the Discord bot
 
 Please refer to the [Discord Bot Setup page](../discord/bot-creation/creation.md).
+Complete the steps there and return back to this guide.
 
 ## Install and set up Zeppelin
 
@@ -157,8 +162,9 @@ This creates a folder called Zeppelin and clones the bot code there.
      - Get your Discord ID (an 18-20-digit number) and fill it in.
      - If there will be multiple people managing the bot, separate the user IDs with commas.
    - `DEFAULT_ALLOWED_SERVERS`: Normally servers need to be allowed before the bot can be added to it. Otherwise it leaves. This indicates the first server that the bot could be added to, where administrative commands can be run to allow other servers.
+     - This usually will not be the server with normal members where Zeppelin will be used, but some kind of test server first.
      - Fill in the Discord server's ID.
-   - `PHISHERMAN_API_KEY`: Phisherman is a live database used for identifying malicious, scam, and phishing links. Uncomment the row if you have an api key.
+   - `PHISHERMAN_API_KEY`: Phisherman is a live database used for identifying malicious, scam, and phishing links. Uncomment the row if you have an api key and paste the api key at the end.
    - DEVELOPMENT: Skip the entire section
    - STANDALONE: Fill in this section unless you already have a MySQL database service set up that you would like to use with Zeppelin. If you don't know, you don't, and fill in this section.
      - STANDALONE_WEB_PORT: Leave this alone unless port 80 on the host computer is already occupied. If it is, change it to something like 81 or 82. If you change this value, go back up to DASHBOARD_URL and API_URL and add a port after the domain or IP. For example: http://zeppelin.gg:81 or http://8.8.8.8:81 for the dashboard and http://zeppelin.gg:81/api or http://8.8.8.8:81/api for the api.
