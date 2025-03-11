@@ -132,6 +132,59 @@ Complete the steps there and return back to this guide.
 
 This creates a folder called Zeppelin and clones the bot code there.
 
+### Needed and Optional Temporary Steps
+
+Some of the steps are required, and some optional. Do both of the required steps, and the optional steps according to your need.
+
+#### Using an Older Commit (required)
+
+The latest commit (that was downloaded using the clone command above) does not currently run without errors. To get around this issue, a known working older commit will be used.
+
+`git checkout b28ca17`
+
+#### Rootrouter (required)
+
+Needed for the bot to start correctly and the dashboard to load.
+
+`nano Zeppelin/backend/src/api/start.ts`
+Press Ctrl-W and type `initAuth` and press Enter.
+
+In each of the 4 lines:
+```
+initAuth(app);
+initGuildsAPI(app);
+initArchives(app);
+initDocs(app);
+```
+
+Change `app` to `rootRouter` so that it looks like this:
+
+```
+initAuth(rootRouter);
+initGuildsAPI(rootRouter);
+initArchives(rootRouter);
+initDocs(rootRouter);
+```
+
+Press Ctrl-X, Y, and Enter to save and close.
+
+#### Embeds in Tags
+
+Tags in the current code are text only. In order to use embeds, some code needs to be changed.
+
+`nano Zeppelin/backend/src/plugins/Tags/types.ts`
+
+Look for `export const zTag = z.union([z.string(), zEmbedInput]);`
+
+Change it to
+
+```
+const zEmbeds = z.object({ embeds: z.array(zEmbedInput) });
+export const zTag = z.union([z.string(), zEmbeds]);
+```
+
+Press Ctrl-X, Y, and Enter to save and close.
+
 ### Configure Zeppelin
 
 1. Enter the Zeppelin folder: `cd Zeppelin`
