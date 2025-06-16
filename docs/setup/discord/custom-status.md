@@ -17,7 +17,20 @@ sidebar_position: 3
    });
    ```
 
-   to line 360 (under `startUptimeCounter()`). You can find all of the different ActivityType's [here](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType).
+   to line 399 (under `startUptimeCounter()`). You can find all of the different ActivityType's [here](https://discord-api-types.dev/api/discord-api-types-v10/enum/ActivityType).
+
+   :::info
+   If using the `Custom` ActivityType, set the activity's `state` instead of its `name`, eg:
+
+   ```js
+   client.user?.setPresence({
+     activities: [
+       { state: "Burning in a trashbin", type: ActivityType.Custom },
+     ],
+   });
+   ```
+
+   :::
 
    ![custom activity](/img/guides/discord/custom_activity.png "Custom Activity")
 

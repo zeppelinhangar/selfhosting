@@ -1,8 +1,12 @@
 ---
-title: Railway Guide
+title: Railway Guide (Outdated)
 description: Hosting on Railway.app
 hide_table_of_contents: false
 ---
+
+:::warning
+Railway is **no longer supported** officialy
+:::
 
 # Deploy [Zeppelin](https://zeppelin.gg) on [Railway](https://railway.app?referralCode=VTVa-k)
 
@@ -113,10 +117,10 @@ You can do this by heading to your API/Bot containers, clicking the 3-dots butto
 We need to insert the OAuth Redirect/Callback URL on Discord's Developer Portal, you can do this in 1 of 2 ways:
 
 1. Go to your API container -> Settings -> Domains, copy the domain and manually append `auth/oauth-callback` to it.
-(i.e. `https://your_api_url.up.railway.com/auth/oauth-callback`)
+   (i.e. `https://your_api_url.up.railway.com/auth/oauth-callback`)
 
 2. Once the API is done building, click the deployment (View Logs), select "Builds Logs", select the Filter bar and search for "oauth".
-![Api Logs](/img/guides/railway/api_logs.png)
+   ![Api Logs](/img/guides/railway/api_logs.png)
 
 Now, go back to Discord Developer Portal and use this url for the OAuth Callback URL.
 

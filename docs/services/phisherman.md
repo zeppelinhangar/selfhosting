@@ -1,9 +1,13 @@
 ---
-title: Phisherman
+title: Phisherman (Deprecated)
 description: Configuring Phisherman for phishing detection
 hide_table_of_contents: false
 sidebar_position: 5
 ---
+
+:::warning
+Phisherman has officially been sunsetted, and replaced with [FishFish](https://fishfish.gg). Instructions on how to obtain an API key will be provided once it is a public API.
+:::
 
 # [Phisherman](https://phisherman.gg/) - Anti [Phishing](https://www.phishing.org/what-is-phishing)
 

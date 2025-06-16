@@ -16,20 +16,7 @@ Right now, patches are being added manually to the [patches repository,](https:/
 However, you can generate a patch file for any [PR](https://github.com/ZeppelinBot/Zeppelin/pulls) by appending `.patch` to the URL.
 
 :::info
-After applying a patch, you may need to perform any/all the following actions:
-
-<details>
-    <summary>For a locally hosted zeppelin</summary>
-    <p>Rebuild your Bot Service</p>
-    <p>Rebuild your API Service</p>
-    <p>Run DB migrations (<code>npm run migrate-prod</code>)</p>
-    <p>Redeploy your Bot Service</p>
-    <p>Redeploy your API Service</p>
-</details>
-<details>
-    <summary>For a zeppelin hosted on docker</summary>
-    Restart the bot, by i.e running: <code>bash ./update.sh</code> (from the project root)
-</details>
+After applying a patch, you may need to rebuild the bot by running `docker compose -f docker-compose.<standalone/lightweight>.yml up -d --build`, replacing standalone/lightweight with your respective compose file.
 
 **If you are not sure what actions to perform for a specific patch, just perform them all to be safe, they will also be specified on each patch's guide page.**
 :::
@@ -77,10 +64,6 @@ Adds better archiving capabilities to zeppelin
 ### [Better Dashboard Management](./better-dashboard-management.md)
 
 Spoofs API permissions for Zeppelin STAFF users so that they have access to all servers without modifying your database
-
-### [Hangar Emoji](./hangar-emoji.md)
-
-Changes your case icon and success emoji icon to use emoji from [The Hangar](https://discord.gg/uTcdUmF6Q7) discord server
 
 ### [Default BotControl Overrides](./default-bc-overrides.md)
 
