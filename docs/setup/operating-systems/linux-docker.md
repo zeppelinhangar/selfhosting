@@ -59,13 +59,13 @@ Run the following commands and pay attention to the output.
 
 If it says that docker is not found, skip down to the Installing Docker section below.
 
-If Docker is installed, it will give a version number. Make sure it's version 20. As of the time this article was written, the latest version was 20.10.22.
+If Docker is installed, it will give a version number. Make sure it's version 20+. As of the time this article was written, the latest version was 28.2.2.
 
 2. `docker compose version`
 
 Make sure this is version 2 or higher (it should be if the command works as written)
 
-If it is, skip down to the WHAT SECTION section.
+If it is, skip down to the [Set up the Discord bot](#set-up-the-discord-bot) section.
 
 3. `docker-compose version`
 
@@ -98,9 +98,9 @@ In order to install Docker, we need to add the package repository.
 
 3. Set up the repository:
    `echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+$(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
 
 4. Update the apt index
    `sudo apt-get update`
@@ -132,58 +132,11 @@ Complete the steps there and return back to this guide.
 
 This creates a folder called Zeppelin and clones the bot code there.
 
+<!-- NO REQUIRED/TEMPORARY STEPS. WOOHOO!
 ### Needed and Optional Temporary Steps
 
 Some of the steps are required, and some optional. Do both of the required steps, and the optional steps according to your need.
-
-#### Using an Older Commit (required)
-
-The latest commit (that was downloaded using the clone command above) does not currently run without errors. To get around this issue, a known working older commit will be used.
-
-`git checkout b28ca17`
-
-#### Rootrouter (required)
-
-Needed for the bot to start correctly and the dashboard to load.
-
-`nano Zeppelin/backend/src/api/start.ts`
-Press Ctrl-W and type `initAuth` and press Enter.
-
-In each of the 4 lines:
-```
-initAuth(app);
-initGuildsAPI(app);
-initArchives(app);
-initDocs(app);
-```
-
-Change `app` to `rootRouter` so that it looks like this:
-
-```
-initAuth(rootRouter);
-initGuildsAPI(rootRouter);
-initArchives(rootRouter);
-initDocs(rootRouter);
-```
-
-Press Ctrl-X, Y, and Enter to save and close.
-
-#### Embeds in Tags
-
-Tags in the current code are text only. In order to use embeds, some code needs to be changed.
-
-`nano Zeppelin/backend/src/plugins/Tags/types.ts`
-
-Look for `export const zTag = z.union([z.string(), zEmbedInput]);`
-
-Change it to
-
-```
-const zEmbeds = z.object({ embeds: z.array(zEmbedInput) });
-export const zTag = z.union([z.string(), zEmbeds]);
-```
-
-Press Ctrl-X, Y, and Enter to save and close.
+-->
 
 ### Configure Zeppelin
 
@@ -198,6 +151,7 @@ Press Ctrl-X, Y, and Enter to save and close.
      This is your group's ID. You'll need it in the next step
 4. `nano .env`
    This opens nano, a text editor, editing .env. The subpoints lay out the values you need to fill in. Ignore the rows that are not mentioned below.
+
    - `KEY`: This is an encryption key used to encrypt certain data in the database.
      - Paste in the key you obtained from the openssl command in Step 3 above.
      - It should be 32 characters long, letters and numbers only.
@@ -205,9 +159,8 @@ Press Ctrl-X, Y, and Enter to save and close.
    - `CLIENT_SECRET`: This is the secret from the Oauth page in the Discord developer portal
    - `BOT_TOKEN`: This is the bot token from the Bot page in the Discord developer portal.
    - `DASHBOARD_URL`: This is the URL you and other bot managers will use to access the dashboard to manage server configs
-     - If you are using a domain, fill in http://DOMAIN (e.g. http://zeppelin.gg)
-     - if you are using an IP address, fill in http://IP
-     - Change http to https if you will implement SSL in some way. By default Zeppelin does not set one up.
+     - If you are using a domain, fill in https://DOMAIN (e.g. https://zeppelin.gg)
+     - if you are using an IP address, fill in https://IP
    - `API_URL`: This is used by the dashboard to access the bot internals; also used by Discord to redirect you back to the dashboard after you log in.
      - Use your dashboard URL, but add `/api` at the end (e.g. https://zeppelin.gg/api)
    - `STAFF`: These are staff to help manage the bot itself. These are not server staff that would manage bot configs.
@@ -217,10 +170,11 @@ Press Ctrl-X, Y, and Enter to save and close.
    - `DEFAULT_ALLOWED_SERVERS`: Normally servers need to be allowed before the bot can be added to it. Otherwise it leaves. This indicates the first server that the bot could be added to, where administrative commands can be run to allow other servers.
      - This usually will not be the server with normal members where Zeppelin will be used, but some kind of test server first.
      - Fill in the Discord server's ID.
-   - `PHISHERMAN_API_KEY`: Phisherman is a live database used for identifying malicious, scam, and phishing links. Uncomment the row if you have an api key and paste the api key at the end.
+   - `FISHFISH_API_KEY`: FishFish is a live database used for identifying malicious, scam, and phishing links. Uncomment the row if you have an api key and paste the api key at the end. **The only way to obtain an API key is to join their Discord server, which is not public at the moment**
+   - `DEFAULT_SUCCESS_EMOJI`, `DEFAULT_ERROR_EMOJI`: The default success/error emojis to be used. Formatted as either a unicode emoji or `<:emoji_name:emoji_id>`
    - DEVELOPMENT: Skip the entire section
    - STANDALONE: Fill in this section unless you already have a MySQL database service set up that you would like to use with Zeppelin. If you don't know, you don't, and fill in this section.
-     - STANDALONE_WEB_PORT: Leave this alone unless port 80 on the host computer is already occupied. If it is, change it to something like 81 or 82. If you change this value, go back up to DASHBOARD_URL and API_URL and add a port after the domain or IP. For example: http://zeppelin.gg:81 or http://8.8.8.8:81 for the dashboard and http://zeppelin.gg:81/api or http://8.8.8.8:81/api for the api.
+     - STANDALONE_WEB_PORT: Set it to `443` unless the port on the host computer is already occupied. If it is, change it to something like 442 or 81, etc. If you change this value, go back up to DASHBOARD_URL and API_URL and add a port after the domain or IP. For example: https://zeppelin.gg:442 or http://8.8.8.8:81 for the dashboard and https://zeppelin.gg:442/api or https://8.8.8.8:81/api for the api.
      - STANDALONE_MYSQL_PORT: This will allow you to access the dashboard from the host computer or another computer using a program such as DBeaver.
        - It does not need to be changed unless there is a port conflict with the host computer.
      - STANDALONE_MYSQL_PASSWORD: Database access password for the zeppelin user.
@@ -241,12 +195,26 @@ Press Ctrl-X, Y, and Enter to save and close.
 
 ## Build and Start the bot
 
+**NOTE**: By default, it will use prebuilt images so the `--build` argument can be omitted from the following commands, unless if you have changed the source code locally, in which case, replace
+
+```yaml
+image: dragory/zeppelin
+```
+
+with
+
+```yaml
+build:
+  context: .
+```
+
+for the `migrate`, `bot`, `api`, and `dashboard` containers in your respective docker-compose (standalone/lightweight).
+Make sure to run the below command **every time** you update/change the source code.
+
 - If you filled in the Standalone section in the env file:
   - `docker compose -f docker-compose.standalone.yml up -d --build`
 - If you filled in the Lightweight section in the env file:
   - `docker compose -f docker-compose.lightweight.yml up -d --build`
-
-**NOTE**: Make sure to run the above command every time you update/change the source code.
 
 The bot will pull images and build other images, create the containers, and start them. It will probably take about a minute or two to start.
 

@@ -10,8 +10,6 @@ All emoji used within these logs is from [The Hangar](https://discord.gg/uTcdUmF
 
 If you would like your bot to have access to the emoji on the server, join us and look at the `#add-your-bot` channel!
 
-You can then apply the [Hangar Emoji Patch](../../patch/hangar-emoji.md) on your instance so it uses those emoji!
-
 #### Name in config: `logs`
 
 ````yaml
@@ -26,7 +24,6 @@ plugins:
       allow_user_mentions: false
       include_embed_timestamp: true
       format:
-        timestamp: ""
         CASE_CREATE: >-
           ✏ {userMention(mod)} manually created new **{caseType}** case
           (#{caseNum})
